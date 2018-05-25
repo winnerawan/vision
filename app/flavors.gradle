@@ -1,0 +1,30 @@
+android {
+  defaultConfig {
+    buildConfigField("int", "DB_SCHEMA_VERSION", DB_SCHEMA_VERSION)
+
+    buildConfigField "String",  "HTTPS",                "\"https\""
+    buildConfigField "String",  "HTTP",                 "\"http\""
+    buildConfigField "int",     "PORT_GRPC",            "80"
+
+    // FIXME should delete
+    buildConfigField "String",  "VISION_ENDPOINT",        "\"apps.winnerawan.net/api\""
+  }
+
+  flavorDimensions "develop"
+  productFlavors {
+    develop {
+      dimension "develop"
+      resValue "string", "app_name", "Vision Dev"
+      manifestPlaceholders = [domain: 'next-innovation.co.id']
+    }
+    staging {
+      dimension "develop"
+      resValue "string", "app_name", "Vision Stg"
+      manifestPlaceholders = [domain: 'next-innovation.co.id']
+    }
+    production {
+      resValue "string", "app_name", "Vision"
+      manifestPlaceholders = [domain: 'next-innovation.co.id']
+    }
+  }
+}
