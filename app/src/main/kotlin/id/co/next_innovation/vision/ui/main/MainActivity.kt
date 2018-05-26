@@ -7,7 +7,7 @@ import android.os.Bundle
 import id.co.next_innovation.vision.R
 import id.co.next_innovation.vision.ui.component.activity.BaseActivity
 import id.co.next_innovation.vision.util.Display
-import id.co.next_innovation.vision.util.ext.setFragment
+import id.co.next_innovation.vision.databinding.ActivityMainBinding
 
 class MainActivity : BaseActivity() {
 
